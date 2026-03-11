@@ -67,33 +67,6 @@ Configure and verify RIP routing between multiple routers.
 ![RIP Lab Topology](screenshots/rip-topology.png)
 
 
-Each folder contains:
-
-- Packet Tracer lab file (.pkt)
-- Configuration notes
-- Lab instructions
-- Screenshots of topology and results
-
----
-
-# Labs
-
-## RIP Configuration Lab
-
-### Objective
-Configure and verify RIP routing between multiple routers.
-
-### Topics Covered
-- RIP Version 2
-- Network advertisement
-- Route verification
-- Basic troubleshooting
-
-### Screenshot
-
-![RIP Lab Topology](screenshots/rip-topology.png)
-
-
 ---
 
 ## OSPF Configuration Lab
