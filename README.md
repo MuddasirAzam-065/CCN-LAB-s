@@ -157,25 +157,24 @@ Configure Network Address Translation to allow private networks to access extern
 
 # Learning Goals
 
-These labs focus on building practical skills in:
+The primary goal of this repository is to build practical knowledge of computer networking concepts through hands-on labs and configuration exercises.
 
-- Routing protocols
-- Switching concepts
-- Network troubleshooting
-- CLI configuration
+Through these labs, the following skills and concepts are practiced:
 
----
+- Understanding fundamental networking concepts and architecture
+- Learning how devices communicate in a network
+- Configuring routers and switches using CLI commands
+- Implementing routing protocols such as RIP, OSPF, and static routing
+- Creating and managing VLANs in switched networks
+- Configuring IP addressing and subnetting
+- Implementing Network Address Translation (NAT)
+- Setting up DHCP for automatic IP address assignment
+- Understanding switching concepts such as trunking and access ports
+- Practicing network troubleshooting using diagnostic commands
+- Interpreting routing tables and network topology
+- Strengthening problem-solving skills in network configuration scenarios
 
-# Future Labs
-
-More labs will be added including:
-
-- EIGRP
-- ACL Configuration
-- Port Security
-- DHCP
-- STP
-- Network troubleshooting scenarios
+These labs are intended to strengthen practical networking skills and support preparation for networking-related certifications and real-world networking environments.
 
 ---
 
