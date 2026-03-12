@@ -96,7 +96,13 @@ A(config-router)#network 13.0.0.0 //Fas network IP
 
 ### Screenshot
 
-![RIP Lab Topology](screenshots/rip-topology.png)
+### Netwrok
+
+<img width="1036" height="372" alt="2" src="https://github.com/user-attachments/assets/4b0e9d4b-003f-4344-b93b-eb050ac88531" />
+
+### Allowing DHCP on end devices
+
+<img width="1362" height="472" alt="3" src="https://github.com/user-attachments/assets/e30b640a-8d0b-4da0-b122-44c65b19147a" />
 
 ---
 
