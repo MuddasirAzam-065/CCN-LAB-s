@@ -4,8 +4,6 @@ A collection of networking labs created while learning and practicing routing, s
 
 This repository documents hands-on networking practice and provides configuration examples for common networking protocols.
 
----
-
 ## Repository Structure
 CCN LAB's
 
@@ -18,9 +16,9 @@ Each folder contains:
 - Lab instructions
 - Screenshots of topology and results
 
----
-
 # Labs
+
+---
 
 ## RIP Configuration Lab
 
@@ -101,6 +99,7 @@ A(config-router)#network 13.0.0.0 //Fas network IP
 
 ![RIP Lab Topology](screenshots/rip-topology.png)
 
+---
 
 ---
 
