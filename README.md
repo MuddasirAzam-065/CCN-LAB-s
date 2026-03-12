@@ -7,7 +7,7 @@ This repository documents hands-on networking practice and provides configuratio
 ## Repository Structure
 CCN LAB's
 
-- [RIP Configuration](#rip-configuration)
+- [RIP Configuration](#rip-configuration-lab)
 
 Each folder contains:
 
@@ -37,7 +37,7 @@ Configure and verify RIP routing between multiple routers.
 - And in configuration mode assign dynamic IP to computers using DHCP
 - Use follwoing commands to configure DCHP
 
-## dhcp
+### dhcp
 
 A(config)#ip dhcp excluded-address 13.0.0.1 // Here this is the IP of interface to which switch is connected.
 
@@ -51,7 +51,7 @@ A(dhcp-config)#dns-server 8.8.8.8
 
 A(dhcp-config)#exit
 
-## RIP
+### RIP
 
 A(config)#interface serial 0/3/0
 
@@ -98,74 +98,6 @@ A(config-router)#network 13.0.0.0 //Fas network IP
 ### Screenshot
 
 ![RIP Lab Topology](screenshots/rip-topology.png)
-
----
-
----
-
-## OSPF Configuration Lab
-
-### Objective
-Implement OSPF routing between routers and verify neighbor relationships.
-
-### Topics Covered
-- OSPF process configuration
-- Router ID
-- Network statements
-- Neighbor adjacency
-
-### Screenshot
-
-![OSPF Lab Topology](screenshots/ospf-topology.png)
-
----
-
-## VLAN Configuration Lab
-
-### Objective
-Create VLANs and configure trunk links between switches.
-
-### Topics Covered
-- VLAN creation
-- Access ports
-- Trunk configuration
-- Inter-VLAN communication
-
-### Screenshot
-
-![VLAN Lab Topology](screenshots/vlan-topology.png)
-
----
-
-## Static Routing Lab
-
-### Objective
-Configure static routes to enable communication between different networks.
-
-### Topics Covered
-- Static route configuration
-- Default route
-- Routing table verification
-
-### Screenshot
-
-![Static Routing Lab](screenshots/static-routing.png)
-
----
-
-## NAT Configuration Lab
-
-### Objective
-Configure Network Address Translation to allow private networks to access external networks.
-
-### Topics Covered
-- Static NAT
-- Dynamic NAT
-- PAT
-
-### Screenshot
-
-![NAT Lab](screenshots/nat-topology.png)
 
 ---
 
