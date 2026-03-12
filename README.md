@@ -9,8 +9,8 @@ This repository documents hands-on networking practice and provides configuratio
 ## Repository Structure
 ```
 CCN LAB's
-│
-├── RIP configuration.
+
+- [RIP Configuration](#rip-configuration)
 ```
 
 Each folder contains:
