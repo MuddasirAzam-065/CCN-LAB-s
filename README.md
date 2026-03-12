@@ -1,0 +1,166 @@
+# CCNA / Networking Labs
+
+A collection of networking labs created while learning and practicing routing, switching, and network troubleshooting concepts using Cisco Packet Tracer.
+
+This repository documents hands-on networking practice and provides configuration examples for common networking protocols.
+
+## CCN LAB's
+
+- [RIP Configuration](#rip-configuration-lab)
+
+Each folder contains:
+
+- Packet Tracer lab file (.pkt)
+- Configuration notes
+- Lab instructions
+- Screenshots of topology and results
+
+# Labs
+
+---
+
+## RIP Configuration Lab
+
+### Objective
+Configure and verify RIP routing between multiple routers.
+
+### Topics Covered
+- RIP Version 2
+- Network advertisement
+- Route verification
+- Basic troubleshooting
+
+### How to confiugure
+- Open the .pkt file
+- Open the router CLI
+- And in configuration mode assign dynamic IP to computers using DHCP
+- Use follwoing commands to configure DCHP
+
+### dhcp
+
+A(config)#ip dhcp excluded-address 13.0.0.1 // Here this is the IP of interface to which switch is connected.
+
+A(config)#ip dhcp pool C // Creating a pool.
+
+A(dhcp-config)#network 13.0.0.0 255.0.0.0 // This is the network IP of the interface.
+
+A(dhcp-config)#default-router 13.0.0.1 // This is the default gateway for switch traffic acctually the IP of interface.
+
+A(dhcp-config)#dns-server 8.8.8.8
+
+A(dhcp-config)#exit
+
+### RIP
+
+A(config)#interface serial 0/3/0
+
+A(config-if)#ip address 10.0.0.1 255.0.0.0
+
+A(config-if)#encapsulation hdlc
+
+A(config-if)#clock rate 64000
+
+A(config-if)#no shutdown 
+
+%LINK-5-CHANGED: Interface Serial0/3/0, changed state to down
+
+A(config-if)#exit
+
+A(config)#interface serial 0/3/1
+
+A(config-if)#ip address 11.0.0.1 255.0.0.0
+
+A(config-if)#encapsulation hdlc
+
+A(config-if)#clock rate 64000
+
+A(config-if)#no shutdown 
+
+%LINK-5-CHANGED: Interface Serial0/3/1, changed state to down
+
+A(config-if)#exit
+
+A(config)#router rip 
+
+A(config-router)#version 2
+
+A(config-router)#no auto-summary
+
+A(config-router)#network 10.0.0.0 //serial network IP
+
+A(config-router)#network 11.0.0.0 //serail network IP
+
+A(config-router)#network 13.0.0.0 //Fas network IP
+
+
+
+### Screenshot
+
+### Netwrok
+
+<img width="1036" height="372" alt="2" src="https://github.com/user-attachments/assets/4b0e9d4b-003f-4344-b93b-eb050ac88531" />
+
+### Allowing DHCP on end devices
+
+<img width="1362" height="472" alt="3" src="https://github.com/user-attachments/assets/e30b640a-8d0b-4da0-b122-44c65b19147a" />
+
+---
+
+# Tools Used
+
+- Cisco Packet Tracer
+- CLI based configuration
+- Networking troubleshooting commands
+
+---
+
+# How to Use These Labs
+
+1. Download the `.pkt` file from the lab folder.
+2. Open it using Cisco Packet Tracer.
+3. Follow the configuration steps provided in the lab README file.
+4. Verify connectivity using commands like:
+   - `ping`
+   - `show ip route`
+   - `show ip protocols`
+
+---
+
+# Learning Goals
+
+The primary goal of this repository is to build practical knowledge of computer networking concepts through hands-on labs and configuration exercises.
+
+Through these labs, the following skills and concepts are practiced:
+
+- Understanding fundamental networking concepts and architecture
+- Learning how devices communicate in a network
+- Configuring routers and switches using CLI commands
+- Implementing routing protocols such as RIP, OSPF, and static routing
+- Creating and managing VLANs in switched networks
+- Configuring IP addressing and subnetting
+- Implementing Network Address Translation (NAT)
+- Setting up DHCP for automatic IP address assignment
+- Understanding switching concepts such as trunking and access ports
+- Practicing network troubleshooting using diagnostic commands
+- Interpreting routing tables and network topology
+- Strengthening problem-solving skills in network configuration scenarios
+
+These labs are intended to strengthen practical networking skills and support preparation for networking-related certifications and real-world networking environments.
+
+---
+
+# Contributing
+
+Contributions are welcome.  
+If you would like to improve a lab or add new networking scenarios, feel free to open a pull request.
+
+---
+## 👨‍💻 Author
+
+**Muddasir Azam**
+
+GitHub  
+https://github.com/MuddasirAzam-065
+
+---
+Created as part of networking practice and CCNA learning journey.
