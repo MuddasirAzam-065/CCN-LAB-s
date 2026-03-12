@@ -4,8 +4,7 @@ A collection of networking labs created while learning and practicing routing, s
 
 This repository documents hands-on networking practice and provides configuration examples for common networking protocols.
 
-## Repository Structure
-CCN LAB's
+## CCN LAB's
 
 - [RIP Configuration](#rip-configuration-lab)
 
