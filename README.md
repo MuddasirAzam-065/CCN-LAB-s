@@ -6,6 +6,7 @@ This repository documents hands-on networking practice and provides configuratio
 
 ## CCN LAB's
 
+-[DHCP Configuratin](#dhcp-configuration-lab)
 - [RIP Configuration](#rip-configuration-lab)
 
 Each folder contains:
@@ -48,7 +49,7 @@ A(dhcp-config)#exit
 
 ### Netwrok
 
-
+<img width="1362" height="472" alt="3" src="https://github.com/user-attachments/assets/e30b640a-8d0b-4da0-b122-44c65b19147a" />
 
 ### Allowing DHCP on end devices
 
