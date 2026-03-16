@@ -6,7 +6,7 @@ This repository documents hands-on networking practice and provides configuratio
 
 ## CCN LAB's
 
--[DHCP Configuratin](#dhcp-configuration-lab)
+- [DHCP Configuratin](#dhcp-configuration-lab)
 - [RIP Configuration](#rip-configuration-lab)
 
 Each folder contains:
