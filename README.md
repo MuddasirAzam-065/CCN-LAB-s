@@ -49,7 +49,7 @@ A(dhcp-config)#exit
 
 ### Netwrok
 
-<img width="1362" height="472" alt="3" src="https://github.com/user-attachments/assets/e30b640a-8d0b-4da0-b122-44c65b19147a" />
+![DHCP Topology](Images/DHCP.png)
 
 ### Allowing DHCP on end devices
 
