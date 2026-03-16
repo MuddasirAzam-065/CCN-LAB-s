@@ -19,6 +19,42 @@ Each folder contains:
 
 ---
 
+## DHCP Configuration Lab
+
+### Objective
+To understand and configure Dynamic Host Configuration Protocol (DHCP) in a network environment so that devices can automatically obtain IP addresses and other network configuration parameters. This lab demonstrates how DHCP simplifies network administration by dynamically assigning IP addresses to hosts instead of configuring them manually.
+
+### How to confiugure
+- Open the .pkt file
+- Open the router CLI
+- And in configuration mode assign dynamic IP to computers using DHCP
+- Use follwoing commands to configure DCHP
+
+### dhcp
+
+A(config)#ip dhcp excluded-address 13.0.0.1 // Here this is the IP of interface to which switch is connected.
+
+A(config)#ip dhcp pool A // Creating a pool.
+
+A(dhcp-config)#network 13.0.0.0 255.0.0.0 // This is the network IP of the interface.
+
+A(dhcp-config)#default-router 13.0.0.1 // This is the default gateway for switch traffic acctually the IP of interface.
+
+A(dhcp-config)#dns-server 8.8.8.8
+
+A(dhcp-config)#exit
+
+### Screenshot
+
+### Netwrok
+
+
+
+### Allowing DHCP on end devices
+
+<img width="1362" height="472" alt="3" src="https://github.com/user-attachments/assets/e30b640a-8d0b-4da0-b122-44c65b19147a" />
+
+
 ## RIP Configuration Lab
 
 ### Objective
