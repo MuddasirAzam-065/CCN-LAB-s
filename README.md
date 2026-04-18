@@ -34,98 +34,60 @@ To understand and configure Dynamic Host Configuration Protocol (DHCP) in a netw
 
 ### dhcp
 
-A(config)#ip dhcp excluded-address 13.0.0.1 // Here this is the IP of interface to which switch is connected.
-
-A(config)#ip dhcp pool A // Creating a pool.
-
-A(dhcp-config)#network 13.0.0.0 255.0.0.0 // This is the network IP of the interface.
-
-A(dhcp-config)#default-router 13.0.0.1 // This is the default gateway for switch traffic acctually the IP of interface.
-
-A(dhcp-config)#dns-server 8.8.8.8
-
+A(config)#ip dhcp excluded-address 13.0.0.1 // Here this is the IP of interface to which switch is connected. \
+A(config)#ip dhcp pool A // Creating a pool. \
+A(dhcp-config)#network 13.0.0.0 255.0.0.0 // This is the network IP of the interface. \
+A(dhcp-config)#default-router 13.0.0.1 // This is the default gateway for switch traffic acctually the IP of interface. \
+A(dhcp-config)#dns-server 8.8.8.8 \
 A(dhcp-config)#exit
 
 ### Screenshot
-
 ### Netwrok
-
 ![DHCP Topology](Images/DHCP.png)
-
 ### Allowing DHCP on end devices
-
 <img width="1362" height="472" alt="3" src="https://github.com/user-attachments/assets/e30b640a-8d0b-4da0-b122-44c65b19147a" />
 
-
 ## RIP Configuration Lab
-
 ### Objective
 Configure and verify RIP routing between multiple routers.
-
 ### Topics Covered
 - RIP Version 2
 - Network advertisement
 - Route verification
 - Basic troubleshooting
-
 ### How to confiugure
 - Open the .pkt file
 - Open the router CLI
 - And in configuration mode assign dynamic IP to computers using DHCP
 - Use follwoing commands to configure DCHP
-
 ### Configure DHCP
-
 First of all configure DHCP on each router to assign dynamic IP to end devices.([DHCP Configuratin](#dhcp-configuration-lab))
-
 ### RIP
-
-A(config)#interface serial 0/3/0
-
-A(config-if)#ip address 10.0.0.1 255.0.0.0
-
-A(config-if)#encapsulation hdlc
-
-A(config-if)#clock rate 64000
-
-A(config-if)#no shutdown 
-
-%LINK-5-CHANGED: Interface Serial0/3/0, changed state to down
-
-A(config-if)#exit
-
-A(config)#interface serial 0/3/1
-
-A(config-if)#ip address 11.0.0.1 255.0.0.0
-
-A(config-if)#encapsulation hdlc
-
-A(config-if)#clock rate 64000
-
-A(config-if)#no shutdown 
-
-%LINK-5-CHANGED: Interface Serial0/3/1, changed state to down
-
-A(config-if)#exit
-
-A(config)#router rip 
-
-A(config-router)#version 2
-
-A(config-router)#no auto-summary
-
-A(config-router)#network 10.0.0.0 //serial network IP
-
-A(config-router)#network 11.0.0.0 //serail network IP
-
-A(config-router)#network 13.0.0.0 //Fas network IP
+A(config)#interface serial 0/3/0 \
+A(config-if)#ip address 10.0.0.1 255.0.0.0 \
+A(config-if)#encapsulation hdlc \
+A(config-if)#clock rate 64000 \
+A(config-if)#no shutdown \
+%LINK-5-CHANGED: Interface Serial0/3/0, changed state to down \
+A(config-if)#exit \
+A(config)#interface serial 0/3/1 \
+A(config-if)#ip address 11.0.0.1 255.0.0.0 \
+A(config-if)#encapsulation hdlc \
+A(config-if)#clock rate 64000 \
+A(config-if)#no shutdown \
+%LINK-5-CHANGED: Interface Serial0/3/1, changed state to down \
+A(config-if)#exit \
+A(config)#router rip \
+A(config-router)#version 2 \
+A(config-router)#no auto-summary \
+A(config-router)#network 10.0.0.0 //serial network IP \
+A(config-router)#network 11.0.0.0 //serail network IP \
+A(config-router)#network 13.0.0.0 //Fas network IP \
 
 
 
 ### Screenshot
-
 ### Netwrok
-
 <img width="1036" height="372" alt="2" src="https://github.com/user-attachments/assets/4b0e9d4b-003f-4344-b93b-eb050ac88531" />
 
 ---
@@ -155,20 +117,20 @@ The following networks are part of Area 0:
 ### Router A Configuration
 A(config)#router ospf 1 \
 A(config-router)#network 10.0.0.0 0.255.255.255 area 0 \
-A(config-router)#network 192.168.1.0 0.0.0.255 area 1 \
+A(config-router)#network 192.168.1.0 0.0.0.255 area 1 
 ### Router B Configuration (Backbone Router)
-B(config)#router ospf 1
-B(config-router)#network 10.0.0.0 0.255.255.255 area 0
-B(config-router)#network 11.0.0.0 0.255.255.255 area 0
+B(config)#router ospf 1 \
+B(config-router)#network 10.0.0.0 0.255.255.255 area 0 \
+B(config-router)#network 11.0.0.0 0.255.255.255 area 0 \
 B(config-router)#network 192.168.2.0 0.0.0.255 area 0
 ### Router C Configuration
-C(config)#router ospf 1
-C(config-router)#network 11.0.0.0 0.255.255.255 area 0
-C(config-router)#network 192.168.3.0 0.0.0.255 area 2
+C(config)#router ospf 1 \
+C(config-router)#network 11.0.0.0 0.255.255.255 area 0 \
+C(config-router)#network 192.168.3.0 0.0.0.255 area 2 \
 C(config-router)#network 12.0.0.0 0.255.255.255 area 0
 ### Router D Configuration
-D(config)#router ospf 1
-D(config-router)#network 12.0.0.0 0.255.255.255 area 0
+D(config)#router ospf 1 \
+D(config-router)#network 12.0.0.0 0.255.255.255 area 0 \
 D(config-router)#network 192.168.4.0 0.0.0.255 area 3
 ## Verification
 Verify the configuration by running command:
