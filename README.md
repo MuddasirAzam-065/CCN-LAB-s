@@ -129,28 +129,6 @@ A(config-router)#network 13.0.0.0 //Fas network IP
 
 ---
 
-# Tools Used
-
-- Cisco Packet Tracer
-- CLI based configuration
-- Networking troubleshooting commands
-
----
-
-# How to Use These Labs
-
-1. Download the `.pkt` file from the lab folder.
-2. Open it using Cisco Packet Tracer.
-3. Follow the configuration steps provided in the lab README file.
-4. Verify connectivity using commands like:
-   - `ping`
-   - `show ip route`
-   - `show ip protocols`
-
----
-
----
-
 ## OSPF Configuration Lab
 
 ### Objctives
@@ -183,32 +161,28 @@ The following networks are part of Area 0:
 
 ## Full OSPF configuration on each router:
 
-========================
-Router A Configuration
-========================
-A(config)#router ospf 1
-A(config-router)#network 10.0.0.0 0.255.255.255 area 0
-A(config-router)#network 192.168.1.0 0.0.0.255 area 1
+### Router A Configuration
 
-========================
-Router B Configuration (Backbone Router)
-========================
+A(config)#router ospf 1 \
+A(config-router)#network 10.0.0.0 0.255.255.255 area 0 \
+A(config-router)#network 192.168.1.0 0.0.0.255 area 1 \
+
+### Router B Configuration (Backbone Router)
+
 B(config)#router ospf 1
 B(config-router)#network 10.0.0.0 0.255.255.255 area 0
 B(config-router)#network 11.0.0.0 0.255.255.255 area 0
 B(config-router)#network 192.168.2.0 0.0.0.255 area 0
 
-========================
-Router C Configuration
-========================
+### Router C Configuration
+
 C(config)#router ospf 1
 C(config-router)#network 11.0.0.0 0.255.255.255 area 0
 C(config-router)#network 192.168.3.0 0.0.0.255 area 2
 C(config-router)#network 12.0.0.0 0.255.255.255 area 0
 
-========================
-Router D Configuration
-========================
+### Router D Configuration
+
 D(config)#router ospf 1
 D(config-router)#network 12.0.0.0 0.255.255.255 area 0
 D(config-router)#network 192.168.4.0 0.0.0.255 area 3
@@ -220,7 +194,29 @@ Verify the configuration by running command:
 show ip route
 
 now look for any IP comming as O, Its OSPF.
+
 ---
+
+# Tools Used
+
+- Cisco Packet Tracer
+- CLI based configuration
+- Networking troubleshooting commands
+
+---
+
+# How to Use These Labs
+
+1. Download the `.pkt` file from the lab folder.
+2. Open it using Cisco Packet Tracer.
+3. Follow the configuration steps provided in the lab README file.
+4. Verify connectivity using commands like:
+   - `ping`
+   - `show ip route`
+   - `show ip protocols`
+
+---
+
 # Learning Goals
 
 The primary goal of this repository is to build practical knowledge of computer networking concepts through hands-on labs and configuration exercises.
