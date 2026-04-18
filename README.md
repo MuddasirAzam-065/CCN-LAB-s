@@ -9,6 +9,7 @@ This repository documents hands-on networking practice and provides configuratio
 - [DHCP Configuratin](#dhcp-configuration-lab)
 - [RIP Configuration](#rip-configuration-lab)
 - [OSPF Confuguration](#ospf-configuration-lab)
+- 
 Each folder contains:
 
 - Packet Tracer lab file (.pkt)
@@ -129,72 +130,50 @@ A(config-router)#network 13.0.0.0 //Fas network IP
 
 ---
 
-## OSPF Configuration Lab
-
+## OSPF Configuration Lab\
 ### Objctives
 Configure a Multi area OSPF
-
-
 ## Network Design
-
 ### Backbone Area (Area 0)
 The following networks are part of Area 0:
 - 10.0.0.0/8  
 - 11.0.0.0/8  
 - 12.0.0.0/8  
-
 ### Other Areas
 - Area 1 → Router A LAN  
 - Area 2 → Router C LAN  
 - Area 3 → Router D LAN  
-
 ---
-
 ## ⚙️ Pre-Configuration Steps
-
 1. Assign IP addresses to all interfaces as per topology  
 2. Identify DCE serial interface:
    clock rate 64000
    show controllers serial 0/0/0
 3.Enable all interfaces:
    no shutdown
-
 ## Full OSPF configuration on each router:
-
 ### Router A Configuration
-
 A(config)#router ospf 1 \
 A(config-router)#network 10.0.0.0 0.255.255.255 area 0 \
 A(config-router)#network 192.168.1.0 0.0.0.255 area 1 \
-
 ### Router B Configuration (Backbone Router)
-
 B(config)#router ospf 1
 B(config-router)#network 10.0.0.0 0.255.255.255 area 0
 B(config-router)#network 11.0.0.0 0.255.255.255 area 0
 B(config-router)#network 192.168.2.0 0.0.0.255 area 0
-
 ### Router C Configuration
-
 C(config)#router ospf 1
 C(config-router)#network 11.0.0.0 0.255.255.255 area 0
 C(config-router)#network 192.168.3.0 0.0.0.255 area 2
 C(config-router)#network 12.0.0.0 0.255.255.255 area 0
-
 ### Router D Configuration
-
 D(config)#router ospf 1
 D(config-router)#network 12.0.0.0 0.255.255.255 area 0
 D(config-router)#network 192.168.4.0 0.0.0.255 area 3
-
 ## Verification
-
 Verify the configuration by running command:
-
 show ip route
-
 now look for any IP comming as O, Its OSPF.
-
 ---
 
 # Tools Used
