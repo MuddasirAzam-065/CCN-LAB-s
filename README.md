@@ -130,7 +130,7 @@ A(config-router)#network 13.0.0.0 //Fas network IP
 
 ---
 
-## OSPF Configuration Lab\
+## OSPF Configuration Lab
 ### Objctives
 Configure a Multi area OSPF
 ## Network Design
