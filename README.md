@@ -9,7 +9,7 @@ This repository documents hands-on networking practice and provides configuratio
 - [DHCP Configuratin](#dhcp-configuration-lab)
 - [RIP Configuration](#rip-configuration-lab)
 - [OSPF Confuguration](#ospf-configuration-lab)
-- 
+
 Each folder contains:
 
 - Packet Tracer lab file (.pkt)
