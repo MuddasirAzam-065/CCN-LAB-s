@@ -44,7 +44,7 @@ A(dhcp-config)#exit
 
 ### Screenshot
 ### Netwrok
-![DHCP Topology](Images/DHCP.png)
+<img width="679" height="353" alt="image" src="https://github.com/user-attachments/assets/eb0da784-f688-47b3-9e3b-a400863d9851" />
 ### Allowing DHCP on end devices
 <img width="1362" height="472" alt="3" src="https://github.com/user-attachments/assets/e30b640a-8d0b-4da0-b122-44c65b19147a" />
 
@@ -145,8 +145,6 @@ now look for any IP comming as O, Its OSPF.
 
 ---
 
----
-
 ## Standard ACL Configuration Lab
 ACL stands for access control logic. It is the protocol that allow host to block spacific traffic, it may be a single host, a network or a range of IP addresses. It is generally deployed on destination end. 
 ### Objective
@@ -178,6 +176,8 @@ D(config-if)#ip access-group 10 out
 Ping From PC1 to PC7
 <img width="639" height="241" alt="image" src="https://github.com/user-attachments/assets/5ddac0e8-a3a3-4461-b68b-b864323925db" />
 We can see saying host unreachable
+
+---
 
 # Tools Used
 
