@@ -9,6 +9,7 @@ This repository documents hands-on networking practice and provides configuratio
 - [DHCP Configuratin](#dhcp-configuration-lab)
 - [RIP Configuration](#rip-configuration-lab)
 - [OSPF Confuguration](#ospf-configuration-lab)
+- [Standard ACL Configuration](#standard-acl-configuration-lab)
 
 Each folder contains:
 
