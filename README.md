@@ -45,6 +45,7 @@ A(dhcp-config)#exit
 ### Screenshot
 ### Netwrok
 <img width="679" height="353" alt="image" src="https://github.com/user-attachments/assets/eb0da784-f688-47b3-9e3b-a400863d9851" />
+
 ### Allowing DHCP on end devices
 <img width="1362" height="472" alt="3" src="https://github.com/user-attachments/assets/e30b640a-8d0b-4da0-b122-44c65b19147a" />
 
