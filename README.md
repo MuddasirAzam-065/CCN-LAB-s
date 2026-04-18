@@ -144,6 +144,40 @@ now look for any IP comming as O, Its OSPF.
 
 ---
 
+---
+
+## Standard ACL Configuration Lab
+ACL stands for access control logic. It is the protocol that allow host to block spacific traffic, it may be a single host, a network or a range of IP addresses. It is generally deployed on destination end. 
+### Objective
+Configure the stndard ACL by blocking a host and a network.
+### Configuration
+First of all configure either [RIP](#rip-configuration-lab) or [OSP]F(#ospf-configuration-lab) to advertise the network over the topology.
+### Network
+Considet the below topology with OSPF configured.
+<img width="1241" height="524" alt="image" src="https://github.com/user-attachments/assets/b0f649c4-5dbf-4743-a789-ce97a7ea6f30" />
+Here we will perform following operations verfi=ying that it is a ACL
+- PC1 wont communicate with network 192.168.4.0 at Router D
+- Network 192.168.3.0 at Router C wont communicate with network 192.168.2.0 at Router B
+### Code
+As we know thatStandard ACL is configures at destinition end, thus in our example ACL will be configures at Router D and Router B. \
+#### At Router B
+B(config)#access-list 20 deny 192.168.3.0 0.0.0.255 \
+B(config)#access-list 20 permit any \
+B(config)#interface fastEthernet 0/0 \
+B(config-if)#ip access-group 20 in \
+B(config-if)#ip access-group 20 out 
+#### AT Router D
+D(config)#access-list 10 deny 192.168.1.2 \
+D(config)#access-list 10 permit any \
+D(config)#interface fastEthernet 0/0  \
+D(config-if)#ip access-group 10 in \
+D(config-if)#ip access-group 10 out 
+
+### Verifying by pinging
+Ping From PC1 to PC7
+<img width="639" height="241" alt="image" src="https://github.com/user-attachments/assets/5ddac0e8-a3a3-4461-b68b-b864323925db" />
+We can see saying host unreachable
+
 # Tools Used
 
 - Cisco Packet Tracer
