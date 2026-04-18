@@ -152,7 +152,7 @@ ACL stands for access control logic. It is the protocol that allow host to block
 ### Objective
 Configure the stndard ACL by blocking a host and a network.
 ### Configuration
-First of all configure either [RIP](#rip-configuration-lab) or [OSP]F(#ospf-configuration-lab) to advertise the network over the topology.
+First of all configure either [RIP](#rip-configuration-lab) or [OSPF](#ospf-configuration-lab) to advertise the network over the topology.
 ### Network
 Considet the below topology with OSPF configured.
 <img width="1241" height="524" alt="image" src="https://github.com/user-attachments/assets/b0f649c4-5dbf-4743-a789-ce97a7ea6f30" />
