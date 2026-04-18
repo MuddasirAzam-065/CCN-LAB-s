@@ -104,9 +104,13 @@ The following networks are part of Area 0:
 ### Other Areas
 - Area 1 → Router A LAN  
 - Area 2 → Router C LAN  
-- Area 3 → Router D LAN  
+- Area 3 → Router D LAN
+
+### Network
+<img width="965" height="358" alt="Screenshot 2026-04-18 141336" src="https://github.com/user-attachments/assets/e0bb27d3-68d3-41ff-aeda-2b72935d0f26" />
+
 ---
-## ⚙️ Pre-Configuration Steps
+## Pre-Configuration Steps
 1. Assign IP addresses to all interfaces as per topology  
 2. Identify DCE serial interface:
    clock rate 64000
@@ -132,10 +136,12 @@ C(config-router)#network 12.0.0.0 0.255.255.255 area 0
 D(config)#router ospf 1 \
 D(config-router)#network 12.0.0.0 0.255.255.255 area 0 \
 D(config-router)#network 192.168.4.0 0.0.0.255 area 3
-## Verification
-Verify the configuration by running command:
-show ip route
-now look for any IP comming as O, Its OSPF.
+### Verification
+
+Verify the configuration by running command: \
+show ip route \
+now look for any IP comming as O, Its OSPF. 
+
 ---
 
 # Tools Used
